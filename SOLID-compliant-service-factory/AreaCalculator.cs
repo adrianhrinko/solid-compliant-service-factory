@@ -28,7 +28,7 @@ namespace SOLID_compliant_service_factory
         }
 
         [FunctionName(nameof(AreaCalculator))]
-        [OpenApiOperation(operationId: "Run", tags: new[] { "name" })]
+        [OpenApiOperation(operationId: "Run", tags: new[] { "areaCalculator" })]
         [OpenApiSecurity("function_key", SecuritySchemeType.ApiKey, Name = "code", In = OpenApiSecurityLocationType.Query)]
         [OpenApiParameter(name: "shape", In = ParameterLocation.Path, Required = true, Type = typeof(string), Description = "The shape (circle, square, rectangle, or thriangle)")]
         [OpenApiResponseWithBody(statusCode: HttpStatusCode.OK, contentType: "application/json", bodyType: typeof(AreaResult), Description = "The area of the shape specified, rounded to 2 decimal places")]
